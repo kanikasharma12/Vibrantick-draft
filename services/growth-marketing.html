@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Growth and Marketing Services | Vibrantick Infotech Solutions</title>
+  <meta name="description" content="Drive compounding organic traffic and high-intent customer acquisition. Technical SEO, ROI-focused PPC, conversion rate optimization, and multi-channel performance funnels that scale revenue." />
+  <link rel="icon" type="image/png" href="../assets/img/vibranticklogo.png" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style id="global-critical-fixes">
+    /* ============================================================
+       FLOATING LETS TALK WIDGET & CHAT POPUP (Image 1 & 2 1:1)
+    ============================================================ */
+    .floating-talk-widget {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .floating-talk-bubble {
+      background: #ffffff;
+      color: #0f172a;
+      padding: 8px 16px;
+      border-radius: 24px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+    .floating-talk-bubble:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 136, 255, 0.35);
+    }
+    .floating-talk-bubble::after {
+      content: "";
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 6px 0 6px 7px;
+      border-style: solid;
+      border-color: transparent transparent transparent #ffffff;
+    }
+    .floating-talk-btn {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0088FF, #00C3FF);
+      border: 3px solid #ffffff;
+      box-shadow: 0 8px 25px rgba(0, 136, 255, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 6px;
+      transition: all 0.3s ease;
+    }
+    .floating-talk-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 30px rgba(0, 210, 255, 0.7);
+    }
+    .floating-talk-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    /* INTERACTIVE CHAT POPUP WINDOW (Exact Image 2) */
+    .chat-popup-modal {
+      position: fixed;
+      bottom: 96px;
+      right: 28px;
+      width: 360px;
+      max-width: calc(100vw - 36px);
+      height: 520px;
+      max-height: calc(100vh - 120px);
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 24px 65px rgba(0, 0, 0, 0.45);
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: scale(0.85) translateY(30px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .chat-popup-modal.is-open {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .chat-header {
+      background: linear-gradient(135deg, #0088FF 0%, #0099FF 100%);
+      color: #ffffff;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .chat-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .chat-avatar-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    .chat-avatar-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .chat-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .chat-subtitle {
+      font-size: 0.74rem;
+      opacity: 0.9;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 3px;
+    }
+    .chat-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .chat-action-btn,
+    .chat-close-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: #ffffff;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .chat-close-btn {
+      background: #ffffff;
+      color: #0088FF;
+    }
+    .chat-close-btn:hover {
+      background: #f1f5f9;
+      transform: scale(1.05);
+    }
+    .chat-body {
+      flex: 1;
+      padding: 18px 16px;
+      overflow-y: auto;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .chat-bubble-bot {
+      background: #ffffff;
+      color: #1e293b;
+      padding: 14px 16px;
+      border-radius: 16px 16px 16px 4px;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      max-width: 86%;
+    }
+    .chat-bot-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .chat-bot-mini-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .chat-bot-mini-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .chat-bot-time {
+      font-size: 0.72rem;
+      color: #94a3b8;
+      margin-left: 42px;
+      margin-top: -6px;
+    }
+    .chat-bubble-user {
+      align-self: flex-end;
+      background: linear-gradient(135deg, #0088FF, #00C3FF);
+      color: #ffffff;
+      padding: 12px 16px;
+      border-radius: 16px 16px 4px 16px;
+      font-size: 0.92rem;
+      box-shadow: 0 4px 12px rgba(0, 136, 255, 0.3);
+      max-width: 82%;
+    }
+    .chat-footer {
+      padding: 12px 16px 14px;
+      background: #ffffff;
+      border-top: 1px solid #f1f5f9;
+    }
+    .chat-input-pill {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 50px;
+      padding: 6px 8px 6px 14px;
+      transition: all 0.25s ease;
+    }
+    .chat-input-pill:focus-within {
+      border-color: #0088FF;
+      box-shadow: 0 0 0 3px rgba(0, 136, 255, 0.15);
+    }
+    .chat-country-code {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding-right: 8px;
+      border-right: 1.5px solid #e2e8f0;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #334155;
+    }
+    .chat-phone-field {
+      border: none;
+      outline: none;
+      flex: 1;
+      padding: 6px 10px;
+      font-size: 0.92rem;
+      color: #0f172a;
+      font-family: inherit;
+    }
+    .chat-send-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      border: none;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .chat-phone-field:not(:placeholder-shown) + .chat-send-btn,
+    .chat-send-btn.active {
+      background: linear-gradient(135deg, #0088FF, #00C3FF);
+      box-shadow: 0 4px 12px rgba(0, 136, 255, 0.4);
+    }
+    .chat-branding-tag {
+      font-size: 0.74rem;
+      color: #64748b;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    /* SINGLE-LINE NAVBAR STABILITY & SUPPRESSION */
+    .nav-logo-text {
+      display: none !important;
+    }
+    .nav-toggle {
+      display: none !important;
+    }
+    .site-header .container {
+      width: 100% !important;
+      max-width: 1440px !important;
+      margin: 0 auto !important;
+      padding: 0 20px !important;
+    }
+    .nav-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: nowrap !important;
+      width: 100% !important;
+      gap: 15px !important;
+    }
+    .nav-links {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: nowrap !important;
+      gap: 15px !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* SEAMLESS UNIFIED SECTIONS - NO BORDER LINES & CONTINUOUS #030b1e */
+    html,
+    body {
+      background-color: #030b1e !important;
+      background: #030b1e !important;
+      scroll-behavior: smooth !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      font-family: 'Poppins', sans-serif;
+      color: #cbd5e1;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+    }
+    .site-header {
+      position: sticky !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      min-height: 70px !important;
+      height: auto !important;
+      z-index: 1000 !important;
+      background: rgba(4, 12, 28, 0.94) !important;
+      backdrop-filter: blur(20px) saturate(1.4) !important;
+      -webkit-backdrop-filter: blur(20px) saturate(1.4) !important;
+      border: none !important;
+      box-sizing: border-box !important;
+    }
+    .site-header .container {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 12px 24px !important;
+      min-height: 70px !important;
+      width: 100% !important;
+      max-width: 1440px !important;
+      margin: 0 auto !important;
+    }
+    .nav-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      min-height: 46px !important;
+      flex-wrap: nowrap !important;
+      gap: 14px !important;
+    }
+    .nav-logo {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      text-decoration: none !important;
+    }
+    .nav-logo img {
+      height: 38px !important;
+      width: auto !important;
+    }
+    .nav-logo-text {
+      font-size: 1.3rem !important;
+      font-weight: 800 !important;
+      color: #fff !important;
+    }
+    .nav-logo-text .accent {
+      color: #0088FF !important;
+    }
+    .nav-links {
+      display: flex !important;
+      align-items: center !important;
+      gap: 14px !important;
+      flex-wrap: nowrap !important;
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .nav-pill-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 6px 14px !important;
+      background: rgba(0, 136, 255, 0.12) !important;
+      border: 1px solid rgba(0, 163, 255, 0.35) !important;
+      border-radius: 50px !important;
+      color: #00D2FF !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+    }
+    .nav-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      color: rgba(255, 255, 255, 0.88) !important;
+      text-decoration: none !important;
+      padding: 8px 10px !important;
+      border-radius: 8px !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+    .nav-link:hover {
+      color: #0088FF !important;
+    }
+    .nav-cta {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 10px 22px !important;
+      font-size: 13.5px !important;
+      font-weight: 600 !important;
+      color: #ffffff !important;
+      background: linear-gradient(135deg, #0088FF, #00c6ff) !important;
+      border: none !important;
+      border-radius: 50px !important;
+      text-decoration: none !important;
+      box-shadow: 0 4px 18px rgba(0, 136, 255, 0.35) !important;
+      white-space: nowrap !important;
+      cursor: pointer !important;
+      transition: all 0.25s ease !important;
+    }
+    .nav-cta:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 24px rgba(0, 136, 255, 0.5) !important;
+    }
+    .nav-toggle {
+      display: none !important;
+      background: none !important;
+      border: none !important;
+      color: #fff !important;
+      font-size: 1.3rem !important;
+      cursor: pointer !important;
+    }
+
+    /* Dropdown Menus */
+    .nav-item-dropdown {
+      position: relative !important;
+    }
+    .nav-dropdown-menu {
+      position: absolute !important;
+      top: calc(100% + 10px) !important;
+      left: 0 !important;
+      background: #081226 !important;
+      border: 1px solid rgba(0, 136, 255, 0.25) !important;
+      border-radius: 14px !important;
+      padding: 14px !important;
+      min-width: 260px !important;
+      display: none !important;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+      z-index: 1000 !important;
+    }
+    .nav-dropdown-menu-wide {
+      width: 640px !important;
+      display: none !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 10px !important;
+    }
+    .nav-item-dropdown:hover .nav-dropdown-menu {
+      display: block !important;
+    }
+    .nav-item-dropdown:hover .nav-dropdown-menu-wide {
+      display: grid !important;
+    }
+    .dropdown-service-item {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      padding: 10px 12px !important;
+      border-radius: 8px !important;
+      text-decoration: none !important;
+      transition: background 0.2s ease !important;
+    }
+    .dropdown-service-item:hover {
+      background: rgba(0, 136, 255, 0.12) !important;
+    }
+    .dropdown-item-icon {
+      color: #00D2FF !important;
+      font-size: 1.1rem !important;
+      width: 24px !important;
+    }
+    .dropdown-item-title {
+      display: block !important;
+      color: #fff !important;
+      font-size: 13.5px !important;
+      font-weight: 600 !important;
+    }
+    .dropdown-item-sub {
+      display: block !important;
+      color: #94a3b8 !important;
+      font-size: 11.5px !important;
+    }
+
+    /* Service Page Layout */
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .service-hero {
+      background: #030b1e;
+      padding: 70px 0 60px;
+      position: relative;
+    }
+    .breadcrumb-nav {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+    .breadcrumb-nav a {
+      color: #00D2FF;
+      text-decoration: none;
+    }
+    .section-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 136, 255, 0.12);
+      border: 1px solid rgba(0, 163, 255, 0.3);
+      border-radius: 50px;
+      padding: 6px 18px;
+      color: #00D2FF;
+      font-size: 12.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+    .service-hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .service-hero-title {
+      font-size: clamp(2.4rem, 3.4vw, 3.4rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .service-hero-desc {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      line-height: 1.7;
+      margin-bottom: 34px;
+    }
+    .hero-btn-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-hero-primary {
+      background: linear-gradient(135deg, #0088FF, #0066cc);
+      color: #ffffff;
+      padding: 14px 34px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(0, 136, 255, 0.35);
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-hero-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0, 136, 255, 0.5);
+    }
+    .btn-hero-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .btn-hero-outline:hover {
+      border-color: #0088FF;
+      color: #00D2FF;
+      background: rgba(0, 136, 255, 0.08);
+    }
+
+    /* Stat Card Side */
+    .service-hero-stat-card {
+      background: radial-gradient(circle at 80% 20%, rgba(0, 136, 255, 0.12) 0%, rgba(13, 20, 38, 0.95) 70%), #0c1222;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .stat-metric-block {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 22px;
+    }
+    .stat-metric-block:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .stat-metric-val {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 6px;
+      background: linear-gradient(135deg, #ffffff 40%, #00C3FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .stat-metric-lbl {
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    /* Bento Features Grid */
+    .service-bento-section {
+      background: #030b1e;
+      padding: 70px 0 85px;
+    }
+    .section-head-center {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+    .section-head-title {
+      font-size: clamp(2rem, 2.7vw, 2.6rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    .section-head-desc {
+      font-size: 1rem;
+      color: #94a3b8;
+      line-height: 1.65;
+    }
+    .bento-features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .bento-feat-card {
+      background: rgba(14, 22, 40, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 38px 32px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.35s ease;
+      backdrop-filter: blur(8px);
+    }
+    .bento-feat-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 163, 255, 0.45);
+      box-shadow: 0 14px 35px rgba(0, 136, 255, 0.18);
+      background: rgba(18, 28, 50, 0.85);
+    }
+    .bento-feat-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: rgba(0, 136, 255, 0.12);
+      border: 1px solid rgba(0, 163, 255, 0.25);
+      color: #00D2FF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+    .bento-feat-card:hover .bento-feat-icon {
+      background: #0088FF;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(0, 136, 255, 0.5);
+    }
+    .bento-feat-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+    .bento-feat-desc {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Tech Stack */
+    .tech-stack-section {
+      background: #030b1e;
+      padding: 50px 0 75px;
+    }
+    .tech-chips-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .tech-chip-item {
+      background: rgba(14, 22, 40, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+    .tech-chip-item:hover {
+      border-color: #0088FF;
+      color: #00D2FF;
+      background: rgba(0, 136, 255, 0.12);
+      transform: translateY(-2px);
+    }
+
+    /* 5-Step Process */
+    .process-section {
+      background: #030b1e;
+      padding: 70px 0 85px;
+    }
+    .process-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+    .process-step-card {
+      background: rgba(14, 22, 40, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 30px 22px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .process-step-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 163, 255, 0.4);
+    }
+    .step-num-badge {
+      font-size: 12px;
+      font-weight: 800;
+      color: #0088FF;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .step-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .step-desc {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Case Callout */
+    .service-case-callout {
+      background: #030b1e;
+      padding: 40px 0 80px;
+    }
+    .case-callout-inner {
+      background: radial-gradient(circle at 85% 20%, rgba(0, 136, 255, 0.12) 0%, rgba(13, 20, 38, 0.95) 70%), #0c1222;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 44px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+    .callout-left {
+      max-width: 680px;
+    }
+    .callout-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .callout-desc {
+      font-size: 0.98rem;
+      color: #94a3b8;
+      line-height: 1.65;
+    }
+
+    /* Consultation Card Section */
+    .consultation-wrap {
+      background: #030b1e;
+      padding: 50px 0 80px;
+    }
+    .consultation-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 50px 44px;
+      color: #0f172a;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .consult-left h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      color: #0a1128;
+    }
+    .consult-left p {
+      color: #475569;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+    .consult-form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .consult-input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      box-sizing: border-box;
+    }
+    .consult-input:focus {
+      border-color: #0088FF;
+      box-shadow: 0 0 0 3px rgba(0, 136, 255, 0.15);
+    }
+    .consult-submit-btn {
+      background: linear-gradient(135deg, #0088FF, #0066cc);
+      color: #ffffff;
+      border: none;
+      padding: 16px 30px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+    .consult-submit-btn:hover {
+      background: linear-gradient(135deg, #00A3FF, #0088FF);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 255, 0.35);
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #030b1e !important;
+      padding: 60px 0 30px;
+      border-top: none !important;
+      color: #94a3b8;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
+    .footer-links a:hover {
+      color: #00D2FF;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 24px;
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    /* Proposal Modal */
+    .proposal-modal-backdrop {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(3, 11, 30, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: none;
+    }
+    .proposal-modal-backdrop.open { display: block; }
+    .proposal-modal {
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%; max-width: 620px;
+      background: #091326;
+      border: 1px solid rgba(0, 136, 255, 0.3);
+      border-radius: 20px;
+      padding: 36px 32px;
+      z-index: 2001;
+      display: none;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+    }
+    .proposal-modal.open { display: block; }
+    .modal-close-btn {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: none; border: none;
+      color: #94a3b8; font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Floating Talk Widget */
+    .floating-talk-widget {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      display: flex; align-items: center; gap: 10px;
+      z-index: 999;
+    }
+    .floating-talk-bubble {
+      background: #fff; color: #0a1128;
+      padding: 8px 16px; border-radius: 50px;
+      font-size: 13px; font-weight: 700;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+    .floating-talk-btn {
+      width: 50px; height: 50px;
+      border-radius: 50%; background: #0088FF;
+      border: none; color: #fff; font-size: 20px;
+      cursor: pointer; box-shadow: 0 6px 25px rgba(0, 136, 255, 0.5);
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    @media (max-width: 992px) {
+      .service-hero-grid { grid-template-columns: 1fr; }
+      .bento-features-grid { grid-template-columns: 1fr; }
+      .process-steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .consultation-card { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+      .nav-links { display: none !important; }
+      .nav-toggle { display: block !important; }
+    }
+    @media (max-width: 576px) {
+      .process-steps-grid { grid-template-columns: 1fr; }
+      .case-callout-inner { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Unified Global Header -->
+  <header class="site-header" id="site-header">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+
+      <!-- Official Vibrantick Brand Logo (Clean Icon & Brand Wordmark Only) -->
+      <a href="../index.html" class="nav-logo" aria-label="Vibrantick Solutions - Home">
+        <img
+          src="../assets/img/vibranticklogo.png"
+          alt="Vibrantick Solutions"
+          id="nav-logo-img"
+        />
+      </a>
+
+      <!-- Center Nav Links matching WebHopers Screenshot 1 -->
+      <ul class="nav-links" role="list">
+        <li>
+          <!-- Gradient pill badge - Vibrantick AI Highlight (Hopers AI equivalent) -->
+          <a class="nav-pill-badge" href="../index.html#services" aria-label="Vibrantick AI Solutions & Automation">
+            <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+            Vibrantick AI
+          </a>
+        </li>
+
+        <!-- Who We Are Dropdown (Sub-Pages) -->
+        <li class="nav-item-dropdown">
+          <a class="nav-link nav-link-dropdown" href="../about.html" aria-haspopup="true" aria-expanded="false">
+            Who We Are <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i>
+          </a>
+          <div class="nav-dropdown-menu nav-dropdown-menu-sm" role="menu">
+            <a class="dropdown-service-item" href="../about.html" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-circle-info"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">About Vibrantick</span>
+                <span class="dropdown-item-sub">Our Story, Vision &amp; Scale</span>
+              </div>
+            </a>
+            <a class="dropdown-service-item" href="../why-choose-us.html" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-award"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Why Choose Us</span>
+                <span class="dropdown-item-sub">Proven Track Record &amp; Trust</span>
+              </div>
+            </a>
+            <a class="dropdown-service-item" href="../our-process.html" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-diagram-project"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Our Process</span>
+                <span class="dropdown-item-sub">Agile Delivery Methodology</span>
+              </div>
+            </a>
+            <a class="dropdown-service-item" href="../team.html" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-users"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Leadership Team</span>
+                <span class="dropdown-item-sub">Meet Our Tech Architects</span>
+              </div>
+            </a>
+            <a class="dropdown-service-item" href="../awards-certificates.html" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-certificate"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Certifications &amp; ISO</span>
+                <span class="dropdown-item-sub">ISO 9001:2015 &amp; MSME Credentials</span>
+              </div>
+            </a>
+            <a class="dropdown-service-item" href="../clients.html" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-star"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Clients &amp; Reviews</span>
+                <span class="dropdown-item-sub">4.9/5 Rating Across Top Platforms</span>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <!-- What We Do Mega Dropdown (All 12 Services) -->
+        <li class="nav-item-dropdown">
+          <a class="nav-link nav-link-dropdown" href="../services.html" aria-haspopup="true" aria-expanded="false">
+            What We Do <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i>
+          </a>
+          <div class="nav-dropdown-menu" role="menu">
+            <div class="nav-dropdown-header">
+              <span class="dropdown-header-badge"><i class="fa-solid fa-layer-group"></i> OUR EXPERTISE</span>
+              <span class="dropdown-header-title">All 12 Core Digital Services</span>
+            </div>
+            <div class="nav-dropdown-grid">
+              <a class="dropdown-service-item" href="cloud-services.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Cloud Services</span>
+                  <span class="dropdown-item-sub">AWS &amp; Azure Solutions</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="cyber-security.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Cyber Security</span>
+                  <span class="dropdown-item-sub">Threat Prevention &amp; Audits</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="database-management.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-database"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Database Management</span>
+                  <span class="dropdown-item-sub">SQL/NoSQL Administration</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="devsecops.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-infinity"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">DevSecOps</span>
+                  <span class="dropdown-item-sub">Automated CI/CD Pipelines</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="ecommerce-management.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">E-commerce Management</span>
+                  <span class="dropdown-item-sub">Shopify &amp; Custom Stores</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="enterprise-software.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Enterprise Software Development</span>
+                  <span class="dropdown-item-sub">Bespoke SaaS &amp; ERP Platforms</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="fintech-development.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-vault"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Fintech Development</span>
+                  <span class="dropdown-item-sub">Payment &amp; Banking Tech</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="graphics-web-design.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-bezier-curve"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Graphics &amp; Web Design</span>
+                  <span class="dropdown-item-sub">Modern UI/UX &amp; Branding</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="growth-marketing.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Growth and Marketing</span>
+                  <span class="dropdown-item-sub">SEO, PPC &amp; Lead Funnels</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="mobile-app-solutions.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Mobile App Solutions</span>
+                  <span class="dropdown-item-sub">iOS &amp; Android Apps</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="training-skill-development.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Training and Skill Development</span>
+                  <span class="dropdown-item-sub">Corporate IT Upskilling</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="web-development.html" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Web Development</span>
+                  <span class="dropdown-item-sub">Custom High-Speed Sites</span>
+                </div>
+              </a>
+            </div>
+            <div class="nav-dropdown-footer">
+              <span>Looking for end-to-end custom solutions?</span>
+              <a href="../index.html#services" class="dropdown-footer-link">All Services On Page <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Our Work Dropdown -->
+        <li class="nav-item-dropdown">
+          <a class="nav-link nav-link-dropdown" href="../portfolio.html" aria-haspopup="true" aria-expanded="false">
+            Our Work <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i>
+          </a>
+          <div class="nav-dropdown-menu nav-dropdown-menu-sm" role="menu">
+            <a class="dropdown-service-item" href="../portfolio.html" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Featured Projects</span>
+                <span class="dropdown-item-sub">Explore Recent Deliveries</span>
+              </div>
+            </a>
+            <a class="dropdown-service-item" href="../portfolio.html#web" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Web Applications</span>
+                <span class="dropdown-item-sub">SaaS &amp; Portal Case Studies</span>
+              </div>
+            </a>
+            <a class="dropdown-service-item" href="../portfolio.html#ecommerce" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">E-Commerce Stores</span>
+                <span class="dropdown-item-sub">High-Converting Checkouts</span>
+              </div>
+            </a>
+            <a class="dropdown-service-item" href="../index.html#case-studies" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-folder-open"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Client Case Studies</span>
+                <span class="dropdown-item-sub">Real Results &amp; Strategy</span>
+              </div>
+            </a>
+            <a class="dropdown-service-item" href="../portfolio.html#mobile" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Mobile Apps</span>
+                <span class="dropdown-item-sub">iOS &amp; Android Showcases</span>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <!-- Industries We Serve Dropdown -->
+        <li class="nav-item-dropdown">
+          <a class="nav-link nav-link-dropdown" href="../index.html#industries" aria-haspopup="true" aria-expanded="false">
+            Industries We Serve <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i>
+          </a>
+          <div class="nav-dropdown-menu nav-dropdown-menu-industries" role="menu">
+            <div class="nav-dropdown-header">
+              <span class="dropdown-header-badge"><i class="fa-solid fa-cubes"></i> SECTORS WE EMPOWER</span>
+              <span class="dropdown-header-title">Tailored Industry Tech</span>
+            </div>
+            <div class="nav-dropdown-grid-industries">
+              <a class="dropdown-service-item" href="../index.html#industries" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Healthcare &amp; Fitness</span>
+                  <span class="dropdown-item-sub">Telehealth, Clinics &amp; Apps</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="../index.html#industries" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-building"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Real Estate &amp; Construction</span>
+                  <span class="dropdown-item-sub">IDX Listings &amp; Portals</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="../index.html#industries" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">E-Commerce &amp; Retail</span>
+                  <span class="dropdown-item-sub">D2C Stores &amp; Multi-Vendor</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="../index.html#industries" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Education &amp; EdTech</span>
+                  <span class="dropdown-item-sub">LMS &amp; Virtual Classrooms</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="../index.html#industries" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-vault"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Finance &amp; FinTech</span>
+                  <span class="dropdown-item-sub">Banking, UPI &amp; Compliance</span>
+                </div>
+              </a>
+              <a class="dropdown-service-item" href="../index.html#industries" role="menuitem">
+                <div class="dropdown-item-icon"><i class="fa-solid fa-microchip"></i></div>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">IT &amp; SaaS Enterprises</span>
+                  <span class="dropdown-item-sub">B2B Cloud &amp; Platforms</span>
+                </div>
+              </a>
+            </div>
+            <div class="nav-dropdown-footer">
+              <span>Need vertical-specific architecture?</span>
+              <a href="../index.html#industries" class="dropdown-footer-link">Explore Industries On Page <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Pricing Dropdown -->
+        <li class="nav-item-dropdown">
+          <a class="nav-link nav-link-dropdown" href="../contact.html" aria-haspopup="true" aria-expanded="false">
+            Pricing <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i>
+          </a>
+          <div class="nav-dropdown-menu nav-dropdown-menu-sm" role="menu">
+            <a class="dropdown-service-item btn-open-proposal" href="javascript:void(0);" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-tag"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Custom Project Quotes</span>
+                <span class="dropdown-item-sub">Fixed-Price Transparent Scope</span>
+              </div>
+            </a>
+            <a class="dropdown-service-item btn-open-proposal" href="javascript:void(0);" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-user-gear"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Dedicated Team Model</span>
+                <span class="dropdown-item-sub">Monthly Retainers &amp; Agile Staffing</span>
+              </div>
+            </a>
+            <a class="dropdown-service-item btn-open-proposal" href="javascript:void(0);" role="menuitem">
+              <div class="dropdown-item-icon"><i class="fa-solid fa-bolt"></i></div>
+              <div class="dropdown-item-content">
+                <span class="dropdown-item-title">Free Website Audit</span>
+                <span class="dropdown-item-sub">Speed, SEO &amp; Security Evaluation</span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Clean Text "Get a Proposal" Button -->
+      <a class="nav-cta" href="../contact-us.html" id="navProposalBtn">Get a Proposal</a>
+
+    </nav>
+  </div>
+</header>
+
+  <!-- Service Hero Section -->
+  <section class="service-hero">
+    <div class="container">
+      <div class="breadcrumb-nav">
+        <a href="../index.html">Home</a> / <a href="../services.html">Services</a> / <span>Growth and Marketing</span>
+      </div>
+      <div class="service-hero-grid">
+        <div class="service-hero-left">
+          <div class="section-pill-badge">
+            <i class="fa-solid fa-chart-line"></i> DATA-DRIVEN ROI & PERFORMANCE
+          </div>
+          <h1 class="service-hero-title">
+            Enterprise Growth and Marketing Engineered for Scale
+          </h1>
+          <p class="service-hero-desc">
+            Drive compounding organic traffic and high-intent customer acquisition. Technical SEO, ROI-focused PPC, conversion rate optimization, and multi-channel performance funnels that scale revenue.
+          </p>
+          <div class="hero-btn-row">
+            <button class="btn-hero-primary btn-open-proposal" type="button">
+              Get a Proposal <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <a href="../contact.html" class="btn-hero-outline">
+              Book Technical Strategy Call
+            </a>
+          </div>
+        </div>
+
+        <div class="service-hero-right">
+          <div class="service-hero-stat-card">
+            <div class="stat-metric-block">
+              <div class="stat-metric-val">180%</div>
+              <div class="stat-metric-lbl">Average Organic Traffic Lift</div>
+            </div>
+            <div class="stat-metric-block">
+              <div class="stat-metric-val">4.2x</div>
+              <div class="stat-metric-lbl">Average Paid Ad ROAS</div>
+            </div>
+            <div class="stat-metric-block">
+              <div class="stat-metric-val">3500+</div>
+              <div class="stat-metric-lbl">Delivered Projects Worldwide</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-Card Bento Features Grid -->
+  <section class="service-bento-section">
+    <div class="container">
+      <div class="section-head-center">
+        <div class="section-pill-badge">
+          <i class="fa-solid fa-cubes"></i> CORE CAPABILITIES
+        </div>
+        <h2 class="section-head-title">Comprehensive Growth and Marketing Solutions</h2>
+        <p class="section-head-desc">
+          Engineered with enterprise best practices, scalable architecture, and end-to-end accountability.
+        </p>
+      </div>
+
+      <div class="bento-features-grid">
+        
+        <div class="bento-feat-card">
+          <div class="bento-feat-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3 class="bento-feat-title">Technical & Enterprise SEO</h3>
+          <p class="bento-feat-desc">Deep algorithmic search engine optimization, semantic schema markup, Core Web Vitals fixes, and authority link architecture.</p>
+        </div>
+        <div class="bento-feat-card">
+          <div class="bento-feat-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3 class="bento-feat-title">High-ROI Paid Advertising (PPC)</h3>
+          <p class="bento-feat-desc">Data-driven Google Ads, Meta Ads, and LinkedIn campaign management targeting high-intent decision makers with minimal CPA.</p>
+        </div>
+        <div class="bento-feat-card">
+          <div class="bento-feat-icon"><i class="fa-solid fa-filter-circle-dollar"></i></div>
+          <h3 class="bento-feat-title">Conversion Rate Optimization (CRO)</h3>
+          <p class="bento-feat-desc">Data-backed multivariate A/B testing, heatmapping, and landing page engineering that squeezes maximum revenue from existing visitors.</p>
+        </div>
+        <div class="bento-feat-card">
+          <div class="bento-feat-icon"><i class="fa-solid fa-share-nodes"></i></div>
+          <h3 class="bento-feat-title">Multi-Channel Retargeting Funnels</h3>
+          <p class="bento-feat-desc">Automated email sequences, social retargeting pixels, and omnichannel nurturing funnels that recover abandoned leads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Capabilities -->
+  <section class="tech-stack-section">
+    <div class="container">
+      <div class="section-head-center" style="margin-bottom:20px;">
+        <div class="section-pill-badge">
+          <i class="fa-solid fa-microchip"></i> ARCHITECTURE &amp; TOOLS
+        </div>
+        <h2 class="section-head-title">Proven Technology Ecosystem</h2>
+      </div>
+      <div class="tech-chips-row">
+        <span class="tech-chip-item"><i class="fa-solid fa-check"></i> Google Analytics 4</span>
+        <span class="tech-chip-item"><i class="fa-solid fa-check"></i> Google Search Console</span>
+        <span class="tech-chip-item"><i class="fa-solid fa-check"></i> SEMrush</span>
+        <span class="tech-chip-item"><i class="fa-solid fa-check"></i> Ahrefs</span>
+        <span class="tech-chip-item"><i class="fa-solid fa-check"></i> Google Tag Manager</span>
+        <span class="tech-chip-item"><i class="fa-solid fa-check"></i> Meta Ads Manager</span>
+        <span class="tech-chip-item"><i class="fa-solid fa-check"></i> Hotjar</span>
+        <span class="tech-chip-item"><i class="fa-solid fa-check"></i> Klaviyo</span>
+        <span class="tech-chip-item"><i class="fa-solid fa-check"></i> Looker Studio</span>
+        <span class="tech-chip-item"><i class="fa-solid fa-check"></i> HubSpot</span>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- 5-Step Delivery Lifecycle -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-head-center">
+        <div class="section-pill-badge">
+          <i class="fa-solid fa-diagram-project"></i> AGILE LIFECYCLE
+        </div>
+        <h2 class="section-head-title">How We Deliver Your Project</h2>
+        <p class="section-head-desc">
+          Structured 5-stage engineering methodology guaranteeing on-time delivery, transparency, and high performance.
+        </p>
+      </div>
+
+      <div class="process-steps-grid">
+        <div class="process-step-card">
+          <span class="step-num-badge">Stage 01</span>
+          <h3 class="step-title">Discovery &amp; Scope</h3>
+          <p class="step-desc">In-depth stakeholder workshops, technical requirements analysis, and milestone scoping.</p>
+        </div>
+        <div class="process-step-card">
+          <span class="step-num-badge">Stage 02</span>
+          <h3 class="step-title">Architecture Design</h3>
+          <p class="step-desc">Database schema modeling, API contract specifications, and Figma UI/UX prototyping.</p>
+        </div>
+        <div class="process-step-card">
+          <span class="step-num-badge">Stage 03</span>
+          <h3 class="step-title">Agile Sprints</h3>
+          <p class="step-desc">Bi-weekly development sprints with continuous code integration and client demos.</p>
+        </div>
+        <div class="process-step-card">
+          <span class="step-num-badge">Stage 04</span>
+          <h3 class="step-title">Rigorous QA &amp; VAPT</h3>
+          <p class="step-desc">Automated regression testing, OWASP vulnerability scanning, and cross-browser audits.</p>
+        </div>
+        <div class="process-step-card">
+          <span class="step-num-badge">Stage 05</span>
+          <h3 class="step-title">Launch &amp; 24/7 SLA</h3>
+          <p class="step-desc">Zero-downtime production deployment, edge caching setup, and 24/7 monitoring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Callout -->
+  <section class="service-case-callout">
+    <div class="container">
+      <div class="case-callout-inner">
+        <div class="callout-left">
+          <div class="section-pill-badge" style="margin-bottom:12px;">CLIENT SUCCESS STORY</div>
+          <h3 class="callout-title">Jumping Heights Tourism SEO</h3>
+          <p class="callout-desc">Dominated Google Search rankings across 40+ high-volume adventure tourism search queries, yielding a 220% organic traffic surge and 45K+ direct bookings.</p>
+        </div>
+        <a href="../case-studies.html" class="btn-hero-primary" style="white-space:nowrap;">
+          Read All Case Studies <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Contact Form Section -->
+  <section class="consultation-wrap">
+    <div class="container">
+      <div class="consultation-card">
+        <div class="consult-left">
+          <div class="section-pill-badge" style="background:#e0f2fe; color:#0284c7; border:none;">
+            <i class="fa-solid fa-comments"></i> Free Strategy Session
+          </div>
+          <h2>Ready to Build with Vibrantick's Growth and Marketing Team?</h2>
+          <p>
+            Connect directly with our senior technology architects. We evaluate your existing setup, architect solutions tailored to your KPIs, and provide a fixed-price transparent proposal.
+          </p>
+        </div>
+        <div class="consult-right">
+          <form class="consult-form-grid" id="serviceInquiryForm">
+            <input type="text" class="consult-input" placeholder="Your Full Name" required />
+            <input type="email" class="consult-input" placeholder="Work Email Address" required />
+            <input type="tel" class="consult-input" placeholder="Phone / WhatsApp Number" />
+            <button type="submit" class="consult-submit-btn">Send Strategy Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="../index.html" class="nav-logo" style="margin-bottom:16px;">
+            <span class="nav-logo-text">Vibrant<span class="accent">ick</span></span>
+          </a>
+          <p style="font-size:14px; line-height:1.65; max-width:320px;">
+            Vibrantick Infotech Solutions is an ISO 9001:2015 certified web development, cloud services, and digital marketing agency delivering impactful digital transformations worldwide.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Core Services</h4>
+          <ul class="footer-links">
+            <li><a href="web-development.html">Web Development</a></li>
+            <li><a href="cloud-services.html">Cloud Services</a></li>
+            <li><a href="cyber-security.html">Cyber Security</a></li>
+            <li><a href="ecommerce-management.html">E-commerce Management</a></li>
+            <li><a href="mobile-app-solutions.html">Mobile App Solutions</a></li>
+            <li><a href="growth-marketing.html">Growth &amp; Marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html">About Vibrantick</a></li>
+            <li><a href="../portfolio.html">Featured Work</a></li>
+            <li><a href="../case-studies.html">Case Studies</a></li>
+            <li><a href="../why-choose-us.html">Why Choose Us</a></li>
+            <li><a href="../contact.html">Contact &amp; Proposals</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Vibrantick Infotech Solutions. All rights reserved. | <a href="../privacy-policy.html" style="color:#64748b;">Privacy Policy</a> | <a href="../terms-and-conditions.html" style="color:#64748b;">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Lets Talk Widget -->
+  <div class="floating-talk-widget" id="floatingTalkWidget">
+    <div class="floating-talk-bubble btn-open-proposal" role="button">
+      <span>Lets Talk</span>
+    </div>
+    <button class="floating-talk-btn btn-open-proposal" type="button" aria-label="Open proposal form">
+      <i class="fa-solid fa-comments"></i>
+    </button>
+  </div>
+
+  <!-- Proposal Modal -->
+  <div class="proposal-modal-backdrop" id="proposalModalBackdrop"></div>
+  <div class="proposal-modal" id="proposalModal">
+    <button class="modal-close-btn" id="modalCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+    <div class="section-pill-badge" style="margin-bottom:12px;">GET A PROPOSAL</div>
+    <h3 style="color:#fff; font-size:1.6rem; margin-top:0; margin-bottom:8px;">Get a Free Strategy Call &amp; Proposal</h3>
+    <p style="color:#94a3b8; font-size:14px; margin-bottom:20px;">Tell us about your project vision. Our tech architects will analyze your requirements and get back within 24 hours.</p>
+    <form id="modalProposalForm" style="display:flex; flex-direction:column; gap:14px;">
+      <input type="text" class="consult-input" placeholder="Full Name" required />
+      <input type="email" class="consult-input" placeholder="Work Email" required />
+      <input type="tel" class="consult-input" placeholder="Phone Number" />
+      <textarea class="consult-input" rows="3" placeholder="Briefly describe your project requirements..."></textarea>
+      <button type="submit" class="consult-submit-btn">Send Proposal Request</button>
+    </form>
+  </div>
+
+  <script>
+    // Proposal Modal Handlers
+    const backdrop = document.getElementById('proposalModalBackdrop');
+    const modal = document.getElementById('proposalModal');
+    const closeBtn = document.getElementById('modalCloseBtn');
+    const openBtns = document.querySelectorAll('.btn-open-proposal');
+
+    function openModal() {
+      backdrop.classList.add('open');
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      backdrop.classList.remove('open');
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    openBtns.forEach(btn => btn.addEventListener('click', openModal));
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+
+    // Form handlers
+    const inquiryForm = document.getElementById('serviceInquiryForm');
+    if (inquiryForm) {
+      inquiryForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you! Your strategy session request has been received. Our team will reach out within 24 hours.');
+        inquiryForm.reset();
+      });
+    }
+    const modalForm = document.getElementById('modalProposalForm');
+    if (modalForm) {
+      modalForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you! Your proposal request has been received. Our team will reach out within 24 hours.');
+        closeModal();
+        modalForm.reset();
+      });
+    }
+  </script>
+
+
+<!-- Floating Lets Talk Widget (Image 1 & 2 1:1) -->
+<div class="floating-talk-widget" id="floatingTalkWidget">
+  <div class="floating-talk-bubble" id="talkBubbleBtn" role="button" aria-label="Open Let's Talk chat">
+    <span>Lets Talk</span>
+  </div>
+  <button class="floating-talk-btn" id="talkWidgetBtn" type="button" aria-label="Open Let's Talk chat">
+    <img src="../assets/img/vibranticklogo.png" alt="V" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fa-solid fa-comments\'></i>';" />
+  </button>
+</div>
+
+<!-- Interactive Chat Popup Modal (Exact Image 2 Specification) -->
+<div class="chat-popup-modal" id="chatPopupModal" aria-hidden="true">
+  <!-- Chat Header -->
+  <div class="chat-header">
+    <div class="chat-header-left">
+      <div class="chat-avatar-circle">
+        <img src="../assets/img/vibranticklogo.png" alt="Vibrantick" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fa-solid fa-comments\'></i>';" />
+      </div>
+      <div class="chat-header-info">
+        <h4 class="chat-title">Vibrantick Solutions</h4>
+        <span class="chat-subtitle"><i class="fa-regular fa-clock"></i> Usual reply time: 2 to 3 Minutes</span>
+      </div>
+    </div>
+    <div class="chat-header-actions">
+      <button class="chat-action-btn" type="button" aria-label="Menu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+      <button class="chat-close-btn" id="chatCloseBtn" type="button" aria-label="Close Chat"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+
+  <!-- Chat Body -->
+  <div class="chat-body" id="chatMessages">
+    <!-- Message 1 -->
+    <div class="chat-bubble-bot">
+      <span>Hi, My Name Is Ridhi !</span>
+    </div>
+
+    <!-- Message 2 -->
+    <div class="chat-bot-row">
+      <div class="chat-bot-mini-avatar">
+        <img src="../assets/img/vibranticklogo.png" alt="V" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fa-solid fa-robot\'></i>';" />
+      </div>
+      <div class="chat-bubble-bot">
+        <span>Please enter your contact number For Digital Marketing &amp; Web Development Services. Or Call us at <strong>+91 98704 43528</strong></span>
+      </div>
+    </div>
+    <span class="chat-bot-time" id="chatBotTime">Bot · 5:25 PM</span>
+  </div>
+
+  <!-- Chat Footer Input -->
+  <div class="chat-footer">
+    <form class="chat-input-form" id="chatForm" onsubmit="return handleChatSubmit(event);">
+      <div class="chat-input-pill">
+        <div class="chat-country-code">
+          <span class="flag-icon">🇮🇳</span>
+          <span class="code-text">91</span>
+          <i class="fa-solid fa-caret-down" style="font-size:0.75rem; color:#64748b; margin-left:2px;"></i>
+        </div>
+        <input type="tel" class="chat-phone-field" id="chatPhoneField" placeholder="00000 00000" pattern="[0-9]{10}" required autocomplete="tel" />
+        <button class="chat-send-btn" id="chatSendBtn" type="submit" aria-label="Send Phone Number">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+      <div class="chat-branding-tag">
+        Chat <i class="fa-solid fa-bolt" style="color:#f59e0b"></i> by <span style="color:#0088FF; font-weight:700;">BotPenguin</span>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script id="chat-widget-js">
+  (function initChatWidget() {
+    const talkBubble = document.getElementById('talkBubbleBtn');
+    const talkBtn = document.getElementById('talkWidgetBtn');
+    const chatModal = document.getElementById('chatPopupModal');
+    const chatCloseBtn = document.getElementById('chatCloseBtn');
+    const phoneField = document.getElementById('chatPhoneField');
+    const sendBtn = document.getElementById('chatSendBtn');
+
+    // Dynamic Time
+    const timeElem = document.getElementById('chatBotTime');
+    if (timeElem) {
+      const now = new Date();
+      timeElem.textContent = 'Bot · ' + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function openChat() {
+      if (chatModal) {
+        chatModal.classList.add('is-open');
+        chatModal.setAttribute('aria-hidden', 'false');
+        if (phoneField) phoneField.focus();
+      }
+    }
+
+    function closeChat() {
+      if (chatModal) {
+        chatModal.classList.remove('is-open');
+        chatModal.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    if (talkBubble) talkBubble.onclick = openChat;
+    if (talkBtn) talkBtn.onclick = openChat;
+    if (chatCloseBtn) chatCloseBtn.onclick = closeChat;
+
+    if (phoneField && sendBtn) {
+      phoneField.oninput = function() {
+        if (this.value.trim().length >= 8) {
+          sendBtn.classList.add('active');
+        } else {
+          sendBtn.classList.remove('active');
+        }
+      };
+    }
+
+    window.handleChatSubmit = function(e) {
+      if (e) e.preventDefault();
+      if (!phoneField) return false;
+      const phone = phoneField.value.trim();
+      if (!phone) return false;
+
+      const messages = document.getElementById('chatMessages');
+      if (messages) {
+        const userBubble = document.createElement('div');
+        userBubble.className = 'chat-bubble-user';
+        userBubble.textContent = '+91 ' + phone;
+        messages.appendChild(userBubble);
+        phoneField.value = '';
+        if (sendBtn) sendBtn.classList.remove('active');
+
+        setTimeout(() => {
+          const botRow = document.createElement('div');
+          botRow.className = 'chat-bot-row';
+          botRow.innerHTML = `
+            <div class="chat-bot-mini-avatar">
+              <img src="../assets/img/vibranticklogo.png" alt="V" onerror="this.style.display=\'none\'; this.parentElement.innerHTML=\'<i class=\\'fa-solid fa-robot\\'></i>\';" />
+            </div>
+            <div class="chat-bubble-bot">
+              <span>Thank you! Our technical growth specialist is reviewing your request and will call you within 2 to 3 minutes.</span>
+            </div>
+          `;
+          messages.appendChild(botRow);
+          messages.scrollTop = messages.scrollHeight;
+        }, 800);
+        messages.scrollTop = messages.scrollHeight;
+      }
+      return false;
+    };
+  })();
+</script>
+
+</body>
+</html>
